@@ -1,0 +1,576 @@
+{
+  "schema": "public-workflow-structure-v1",
+  "name": "FIFO Planner",
+  "purpose": "Sanitized structural blueprint derived from the frozen production workflow.",
+  "sanitization": {
+    "productionWorkflowIdRemoved": true,
+    "productionNodeIdsRemoved": true,
+    "nodeNamesRemoved": true,
+    "parametersRemoved": true,
+    "credentialsRemoved": true,
+    "webhookPathsRemoved": true,
+    "urlsRemoved": true,
+    "businessDataRemoved": true
+  },
+  "nodeCount": 31,
+  "connectionCount": 34,
+  "triggerTypes": [
+    "n8n-nodes-base.manualTrigger",
+    "n8n-nodes-base.scheduleTrigger"
+  ],
+  "nodes": [
+    {
+      "id": "N01",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "N02",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        240
+      ]
+    },
+    {
+      "id": "N03",
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
+      "position": [
+        272,
+        128
+      ]
+    },
+    {
+      "id": "N04",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        528,
+        128
+      ]
+    },
+    {
+      "id": "N05",
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
+      "position": [
+        784,
+        128
+      ]
+    },
+    {
+      "id": "N06",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1040,
+        128
+      ]
+    },
+    {
+      "id": "N07",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        1312,
+        128
+      ]
+    },
+    {
+      "id": "N08",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1568,
+        32
+      ]
+    },
+    {
+      "id": "N09",
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
+      "position": [
+        1824,
+        32
+      ]
+    },
+    {
+      "id": "N10",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2080,
+        128
+      ]
+    },
+    {
+      "id": "N11",
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
+      "position": [
+        2352,
+        128
+      ]
+    },
+    {
+      "id": "N12",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2608,
+        128
+      ]
+    },
+    {
+      "id": "N13",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        2864,
+        128
+      ]
+    },
+    {
+      "id": "N14",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        3120,
+        32
+      ]
+    },
+    {
+      "id": "N15",
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
+      "position": [
+        3392,
+        32
+      ]
+    },
+    {
+      "id": "N16",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        3648,
+        128
+      ]
+    },
+    {
+      "id": "N17",
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
+      "position": [
+        3904,
+        128
+      ]
+    },
+    {
+      "id": "N18",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        4160,
+        128
+      ]
+    },
+    {
+      "id": "N19",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        4432,
+        128
+      ]
+    },
+    {
+      "id": "N20",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        4688,
+        32
+      ]
+    },
+    {
+      "id": "N21",
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
+      "position": [
+        4944,
+        32
+      ]
+    },
+    {
+      "id": "N22",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        5200,
+        128
+      ]
+    },
+    {
+      "id": "N23",
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
+      "position": [
+        5472,
+        128
+      ]
+    },
+    {
+      "id": "N24",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        5728,
+        128
+      ]
+    },
+    {
+      "id": "N25",
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
+      "position": [
+        5984,
+        128
+      ]
+    },
+    {
+      "id": "N26",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        6240,
+        128
+      ]
+    },
+    {
+      "id": "N27",
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
+      "position": [
+        -1100,
+        200
+      ]
+    },
+    {
+      "id": "N28",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        3900,
+        300
+      ]
+    },
+    {
+      "id": "N29",
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
+      "position": [
+        4140,
+        300
+      ]
+    },
+    {
+      "id": "N30",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        5200,
+        300
+      ]
+    },
+    {
+      "id": "N31",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        3500,
+        560
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "from": "N02",
+      "channel": "main",
+      "outputIndex": 0,
+      "to": "N27",
+      "inputType": "main",
+      "inputIndex": 0
+    },
+    {
+      "from": "N03",
+      "channel": "main",
+      "outputIndex": 0,
+      "to": "N04",
+      "inputType": "main",
+      "inputIndex": 0
+    },
+    {
+      "from": "N04",
+      "channel": "main",
+      "outputIndex": 0,
+      "to": "N05",
+      "inputType": "main",
+      "inputIndex": 0
+    },
+    {
+      "from": "N05",
+      "channel": "main",
+      "outputIndex": 0,
+      "to": "N06",
+      "inputType": "main",
+      "inputIndex": 0
+    },
+    {
+      "from": "N06",
+      "channel": "main",
+      "outputIndex": 0,
+      "to": "N07",
+      "inputType": "main",
+      "inputIndex": 0
+    },
+    {
+      "from": "N07",
+      "channel": "main",
+      "outputIndex": 0,
+      "to": "N08",
+      "inputType": "main",
+      "inputIndex": 0
+    },
+    {
+      "from": "N07",
+      "channel": "main",
+      "outputIndex": 1,
+      "to": "N10",
+      "inputType": "main",
+      "inputIndex": 0
+    },
+    {
+      "from": "N08",
+      "channel": "main",
+      "outputIndex": 0,
+      "to": "N09",
+      "inputType": "main",
+      "inputIndex": 0
+    },
+    {
+      "from": "N09",
+      "channel": "main",
+      "outputIndex": 0,
+      "to": "N10",
+      "inputType": "main",
+      "inputIndex": 0
+    },
+    {
+      "from": "N10",
+      "channel": "main",
+      "outputIndex": 0,
+      "to": "N11",
+      "inputType": "main",
+      "inputIndex": 0
+    },
+    {
+      "from": "N11",
+      "channel": "main",
+      "outputIndex": 0,
+      "to": "N12",
+      "inputType": "main",
+      "inputIndex": 0
+    },
+    {
+      "from": "N12",
+      "channel": "main",
+      "outputIndex": 0,
+      "to": "N13",
+      "inputType": "main",
+      "inputIndex": 0
+    },
+    {
+      "from": "N13",
+      "channel": "main",
+      "outputIndex": 0,
+      "to": "N14",
+      "inputType": "main",
+      "inputIndex": 0
+    },
+    {
+      "from": "N13",
+      "channel": "main",
+      "outputIndex": 1,
+      "to": "N16",
+      "inputType": "main",
+      "inputIndex": 0
+    },
+    {
+      "from": "N14",
+      "channel": "main",
+      "outputIndex": 0,
+      "to": "N15",
+      "inputType": "main",
+      "inputIndex": 0
+    },
+    {
+      "from": "N15",
+      "channel": "main",
+      "outputIndex": 0,
+      "to": "N16",
+      "inputType": "main",
+      "inputIndex": 0
+    },
+    {
+      "from": "N16",
+      "channel": "main",
+      "outputIndex": 0,
+      "to": "N17",
+      "inputType": "main",
+      "inputIndex": 0
+    },
+    {
+      "from": "N17",
+      "channel": "main",
+      "outputIndex": 0,
+      "to": "N18",
+      "inputType": "main",
+      "inputIndex": 0
+    },
+    {
+      "from": "N18",
+      "channel": "main",
+      "outputIndex": 0,
+      "to": "N19",
+      "inputType": "main",
+      "inputIndex": 0
+    },
+    {
+      "from": "N19",
+      "channel": "main",
+      "outputIndex": 0,
+      "to": "N20",
+      "inputType": "main",
+      "inputIndex": 0
+    },
+    {
+      "from": "N19",
+      "channel": "main",
+      "outputIndex": 1,
+      "to": "N22",
+      "inputType": "main",
+      "inputIndex": 0
+    },
+    {
+      "from": "N20",
+      "channel": "main",
+      "outputIndex": 0,
+      "to": "N21",
+      "inputType": "main",
+      "inputIndex": 0
+    },
+    {
+      "from": "N21",
+      "channel": "main",
+      "outputIndex": 0,
+      "to": "N22",
+      "inputType": "main",
+      "inputIndex": 0
+    },
+    {
+      "from": "N22",
+      "channel": "main",
+      "outputIndex": 0,
+      "to": "N28",
+      "inputType": "main",
+      "inputIndex": 0
+    },
+    {
+      "from": "N23",
+      "channel": "main",
+      "outputIndex": 0,
+      "to": "N24",
+      "inputType": "main",
+      "inputIndex": 0
+    },
+    {
+      "from": "N24",
+      "channel": "main",
+      "outputIndex": 0,
+      "to": "N25",
+      "inputType": "main",
+      "inputIndex": 0
+    },
+    {
+      "from": "N25",
+      "channel": "main",
+      "outputIndex": 0,
+      "to": "N26",
+      "inputType": "main",
+      "inputIndex": 0
+    },
+    {
+      "from": "N27",
+      "channel": "main",
+      "outputIndex": 0,
+      "to": "N03",
+      "inputType": "main",
+      "inputIndex": 0
+    },
+    {
+      "from": "N28",
+      "channel": "main",
+      "outputIndex": 0,
+      "to": "N31",
+      "inputType": "main",
+      "inputIndex": 0
+    },
+    {
+      "from": "N29",
+      "channel": "main",
+      "outputIndex": 0,
+      "to": "N30",
+      "inputType": "main",
+      "inputIndex": 0
+    },
+    {
+      "from": "N30",
+      "channel": "main",
+      "outputIndex": 0,
+      "to": "N23",
+      "inputType": "main",
+      "inputIndex": 0
+    },
+    {
+      "from": "N01",
+      "channel": "main",
+      "outputIndex": 0,
+      "to": "N27",
+      "inputType": "main",
+      "inputIndex": 0
+    },
+    {
+      "from": "N31",
+      "channel": "main",
+      "outputIndex": 0,
+      "to": "N29",
+      "inputType": "main",
+      "inputIndex": 0
+    },
+    {
+      "from": "N31",
+      "channel": "main",
+      "outputIndex": 1,
+      "to": "N30",
+      "inputType": "main",
+      "inputIndex": 0
+    }
+  ]
+}

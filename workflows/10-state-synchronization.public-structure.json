@@ -1,0 +1,160 @@
+{
+  "schema": "public-workflow-structure-v1",
+  "name": "Publication State Synchronization",
+  "purpose": "Sanitized structural blueprint derived from the frozen production workflow.",
+  "sanitization": {
+    "productionWorkflowIdRemoved": true,
+    "productionNodeIdsRemoved": true,
+    "nodeNamesRemoved": true,
+    "parametersRemoved": true,
+    "credentialsRemoved": true,
+    "webhookPathsRemoved": true,
+    "urlsRemoved": true,
+    "businessDataRemoved": true
+  },
+  "nodeCount": 8,
+  "connectionCount": 8,
+  "triggerTypes": [
+    "n8n-nodes-base.executeWorkflowTrigger"
+  ],
+  "nodes": [
+    {
+      "id": "N01",
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        -900,
+        0
+      ]
+    },
+    {
+      "id": "N02",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -660,
+        0
+      ]
+    },
+    {
+      "id": "N03",
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
+      "position": [
+        -420,
+        0
+      ]
+    },
+    {
+      "id": "N04",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -160,
+        0
+      ]
+    },
+    {
+      "id": "N05",
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
+      "position": [
+        100,
+        0
+      ]
+    },
+    {
+      "id": "N06",
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
+      "position": [
+        360,
+        0
+      ]
+    },
+    {
+      "id": "N07",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        620,
+        0
+      ]
+    },
+    {
+      "id": "N08",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        100,
+        -180
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "from": "N01",
+      "channel": "main",
+      "outputIndex": 0,
+      "to": "N02",
+      "inputType": "main",
+      "inputIndex": 0
+    },
+    {
+      "from": "N02",
+      "channel": "main",
+      "outputIndex": 0,
+      "to": "N03",
+      "inputType": "main",
+      "inputIndex": 0
+    },
+    {
+      "from": "N03",
+      "channel": "main",
+      "outputIndex": 0,
+      "to": "N04",
+      "inputType": "main",
+      "inputIndex": 0
+    },
+    {
+      "from": "N04",
+      "channel": "main",
+      "outputIndex": 0,
+      "to": "N08",
+      "inputType": "main",
+      "inputIndex": 0
+    },
+    {
+      "from": "N05",
+      "channel": "main",
+      "outputIndex": 0,
+      "to": "N06",
+      "inputType": "main",
+      "inputIndex": 0
+    },
+    {
+      "from": "N06",
+      "channel": "main",
+      "outputIndex": 0,
+      "to": "N07",
+      "inputType": "main",
+      "inputIndex": 0
+    },
+    {
+      "from": "N08",
+      "channel": "main",
+      "outputIndex": 0,
+      "to": "N07",
+      "inputType": "main",
+      "inputIndex": 0
+    },
+    {
+      "from": "N08",
+      "channel": "main",
+      "outputIndex": 1,
+      "to": "N05",
+      "inputType": "main",
+      "inputIndex": 0
+    }
+  ]
+}

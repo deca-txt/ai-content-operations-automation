@@ -1,0 +1,307 @@
+{
+  "schema": "public-workflow-structure-v1",
+  "name": "Automatic AI Analysis",
+  "purpose": "Sanitized structural blueprint derived from the frozen production workflow.",
+  "sanitization": {
+    "productionWorkflowIdRemoved": true,
+    "productionNodeIdsRemoved": true,
+    "nodeNamesRemoved": true,
+    "parametersRemoved": true,
+    "credentialsRemoved": true,
+    "webhookPathsRemoved": true,
+    "urlsRemoved": true,
+    "businessDataRemoved": true
+  },
+  "nodeCount": 17,
+  "connectionCount": 16,
+  "triggerTypes": [
+    "n8n-nodes-base.manualTrigger",
+    "n8n-nodes-base.scheduleTrigger",
+    "n8n-nodes-base.webhook"
+  ],
+  "nodes": [
+    {
+      "id": "N01",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        240
+      ]
+    },
+    {
+      "id": "N02",
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
+      "position": [
+        272,
+        128
+      ]
+    },
+    {
+      "id": "N03",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        528,
+        128
+      ]
+    },
+    {
+      "id": "N04",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        784,
+        128
+      ]
+    },
+    {
+      "id": "N05",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        1744,
+        128
+      ]
+    },
+    {
+      "id": "N06",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1984,
+        128
+      ]
+    },
+    {
+      "id": "N07",
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
+      "position": [
+        2224,
+        128
+      ]
+    },
+    {
+      "id": "N08",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "N09",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1024,
+        128
+      ]
+    },
+    {
+      "id": "N10",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        1264,
+        128
+      ]
+    },
+    {
+      "id": "N11",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1504,
+        128
+      ]
+    },
+    {
+      "id": "N12",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        -372,
+        -192
+      ]
+    },
+    {
+      "id": "N13",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -132,
+        -192
+      ]
+    },
+    {
+      "id": "N14",
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
+      "position": [
+        108,
+        -192
+      ]
+    },
+    {
+      "id": "N15",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        348,
+        -192
+      ]
+    },
+    {
+      "id": "N16",
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
+      "position": [
+        748,
+        368
+      ]
+    },
+    {
+      "id": "N17",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        988,
+        368
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "from": "N02",
+      "channel": "main",
+      "outputIndex": 0,
+      "to": "N03",
+      "inputType": "main",
+      "inputIndex": 0
+    },
+    {
+      "from": "N03",
+      "channel": "main",
+      "outputIndex": 0,
+      "to": "N16",
+      "inputType": "main",
+      "inputIndex": 0
+    },
+    {
+      "from": "N04",
+      "channel": "main",
+      "outputIndex": 0,
+      "to": "N09",
+      "inputType": "main",
+      "inputIndex": 0
+    },
+    {
+      "from": "N05",
+      "channel": "main",
+      "outputIndex": 0,
+      "to": "N06",
+      "inputType": "main",
+      "inputIndex": 0
+    },
+    {
+      "from": "N06",
+      "channel": "main",
+      "outputIndex": 0,
+      "to": "N07",
+      "inputType": "main",
+      "inputIndex": 0
+    },
+    {
+      "from": "N01",
+      "channel": "main",
+      "outputIndex": 0,
+      "to": "N02",
+      "inputType": "main",
+      "inputIndex": 0
+    },
+    {
+      "from": "N09",
+      "channel": "main",
+      "outputIndex": 0,
+      "to": "N10",
+      "inputType": "main",
+      "inputIndex": 0
+    },
+    {
+      "from": "N10",
+      "channel": "main",
+      "outputIndex": 0,
+      "to": "N11",
+      "inputType": "main",
+      "inputIndex": 0
+    },
+    {
+      "from": "N11",
+      "channel": "main",
+      "outputIndex": 0,
+      "to": "N05",
+      "inputType": "main",
+      "inputIndex": 0
+    },
+    {
+      "from": "N08",
+      "channel": "main",
+      "outputIndex": 0,
+      "to": "N02",
+      "inputType": "main",
+      "inputIndex": 0
+    },
+    {
+      "from": "N12",
+      "channel": "main",
+      "outputIndex": 0,
+      "to": "N13",
+      "inputType": "main",
+      "inputIndex": 0
+    },
+    {
+      "from": "N13",
+      "channel": "main",
+      "outputIndex": 0,
+      "to": "N14",
+      "inputType": "main",
+      "inputIndex": 0
+    },
+    {
+      "from": "N14",
+      "channel": "main",
+      "outputIndex": 0,
+      "to": "N15",
+      "inputType": "main",
+      "inputIndex": 0
+    },
+    {
+      "from": "N15",
+      "channel": "main",
+      "outputIndex": 0,
+      "to": "N03",
+      "inputType": "main",
+      "inputIndex": 0
+    },
+    {
+      "from": "N16",
+      "channel": "main",
+      "outputIndex": 0,
+      "to": "N17",
+      "inputType": "main",
+      "inputIndex": 0
+    },
+    {
+      "from": "N17",
+      "channel": "main",
+      "outputIndex": 0,
+      "to": "N04",
+      "inputType": "main",
+      "inputIndex": 0
+    }
+  ]
+}

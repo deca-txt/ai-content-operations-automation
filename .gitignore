@@ -1,0 +1,36 @@
+# Secrets
+.env
+.env.*
+*.pem
+*.key
+credentials*
+secrets*
+
+# Databases / runtime
+*.sqlite
+*.sqlite-*
+*.db
+*.db-*
+*.wal
+*.shm
+
+# n8n / runtime exports
+.n8n/
+execution-data/
+docker-data/
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.pyc
+
+# Temporary
+tmp/
+temp/
+*.log
+*.zip

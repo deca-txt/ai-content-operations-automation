@@ -1,0 +1,128 @@
+{
+  "schema": "public-workflow-structure-v1",
+  "name": "History & Observability",
+  "purpose": "Sanitized structural blueprint derived from the frozen production workflow.",
+  "sanitization": {
+    "productionWorkflowIdRemoved": true,
+    "productionNodeIdsRemoved": true,
+    "nodeNamesRemoved": true,
+    "parametersRemoved": true,
+    "credentialsRemoved": true,
+    "webhookPathsRemoved": true,
+    "urlsRemoved": true,
+    "businessDataRemoved": true
+  },
+  "nodeCount": 7,
+  "connectionCount": 5,
+  "triggerTypes": [
+    "n8n-nodes-base.respondToWebhook",
+    "n8n-nodes-base.webhook"
+  ],
+  "nodes": [
+    {
+      "id": "N01",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "N02",
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
+      "position": [
+        272,
+        0
+      ]
+    },
+    {
+      "id": "N03",
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
+      "position": [
+        528,
+        0
+      ]
+    },
+    {
+      "id": "N04",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        784,
+        0
+      ]
+    },
+    {
+      "id": "N05",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.5,
+      "position": [
+        1040,
+        0
+      ]
+    },
+    {
+      "id": "N06",
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
+      "position": [
+        480,
+        0
+      ]
+    },
+    {
+      "id": "N07",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        400,
+        0
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "from": "N01",
+      "channel": "main",
+      "outputIndex": 0,
+      "to": "N02",
+      "inputType": "main",
+      "inputIndex": 0
+    },
+    {
+      "from": "N02",
+      "channel": "main",
+      "outputIndex": 0,
+      "to": "N07",
+      "inputType": "main",
+      "inputIndex": 0
+    },
+    {
+      "from": "N03",
+      "channel": "main",
+      "outputIndex": 0,
+      "to": "N04",
+      "inputType": "main",
+      "inputIndex": 0
+    },
+    {
+      "from": "N04",
+      "channel": "main",
+      "outputIndex": 0,
+      "to": "N05",
+      "inputType": "main",
+      "inputIndex": 0
+    },
+    {
+      "from": "N07",
+      "channel": "main",
+      "outputIndex": 0,
+      "to": "N03",
+      "inputType": "main",
+      "inputIndex": 0
+    }
+  ]
+}

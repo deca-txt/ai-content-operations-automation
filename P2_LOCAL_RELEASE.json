@@ -1,0 +1,174 @@
+{
+  "generatedAtUTC": "2026-09-06T01:49:36.341214+00:00",
+  "repository": "ai-content-operations-automation",
+  "status": "LOCAL_SANITIZED_READY_FOR_MANUAL_REVIEW",
+  "rawProductionWorkflowExportsIncluded": false,
+  "publicStructuralBlueprints": 11,
+  "files": [
+    {
+      "path": ".gitignore",
+      "sha256": "05c6116b8d032bf9db1d166e067923e880d67ed8540dfb92746a94ed76dd3f7b",
+      "bytes": 297
+    },
+    {
+      "path": "LICENSE_NOTICE.md",
+      "sha256": "74c1a7dbcdef5f53d03059a1811c1b1062458e2b6719cd816f8bc712df63336c",
+      "bytes": 447
+    },
+    {
+      "path": "P2_GATE.md",
+      "sha256": "e357e6f16d8cba4f3564e1995b2d944aad26dfbcfc556f07db8c2922bfd8956c",
+      "bytes": 610
+    },
+    {
+      "path": "PUBLISHING_CHECKLIST.md",
+      "sha256": "34e01b3590b007f66102649c0091b522de873a9e65e037080382f11716b18e0a",
+      "bytes": 911
+    },
+    {
+      "path": "README.md",
+      "sha256": "d46527378e03f19016a7a3d2f97d0dda3d0b128ede530a76f18cd55084cc2156",
+      "bytes": 5653
+    },
+    {
+      "path": "REPO_METADATA.md",
+      "sha256": "13542d9e735d939dd204bf66c1784c2077638f676a27fde6acb1a6dbcca03fce",
+      "bytes": 637
+    },
+    {
+      "path": "SANITIZATION.md",
+      "sha256": "6c164b803bc96ef43277784773dd193e4fcbd280fbd5febc8f04eb8ec7383a06",
+      "bytes": 1149
+    },
+    {
+      "path": "SECURITY.md",
+      "sha256": "e9f2f43b8b47d13a9278df5b613215dd90e06cf295bcd624645e019d0a8b34b9",
+      "bytes": 340
+    },
+    {
+      "path": "assets/README.md",
+      "sha256": "badb878070e0eb66a3ce71e5606791c0de3f399d51be0d6b0bece845302aeb80",
+      "bytes": 427
+    },
+    {
+      "path": "docs/architecture.md",
+      "sha256": "a5e36a3f65333059b199b1c5e792739dd74200ae0998ac985e63801337ee5d06",
+      "bytes": 1208
+    },
+    {
+      "path": "docs/data-model.md",
+      "sha256": "a27bbcc22ccd5be4aac9e9ca810a6a777ea2cb949ed27459795200fe204c725c",
+      "bytes": 1746
+    },
+    {
+      "path": "docs/future-roadmap.md",
+      "sha256": "1912ecc6406c89c2d55a197d257e6ba890554f9af5096e294660d9c1d884950a",
+      "bytes": 1087
+    },
+    {
+      "path": "docs/index.md",
+      "sha256": "312d9776d87c6551432fa96075cefe6cf6abb060ab0910d144fe01668123f98a",
+      "bytes": 5358
+    },
+    {
+      "path": "docs/learning-roadmap.md",
+      "sha256": "a4dff4be19aaf6a268aa4e2b518c7aa40d1d1bd5eb1114ecc91f5bad3f396d1a",
+      "bytes": 1639
+    },
+    {
+      "path": "docs/release-notes-v1.md",
+      "sha256": "48d167d6597c17f3e28a2cfedd1de22226ad55c8bf85118072a021c6dda67527",
+      "bytes": 718
+    },
+    {
+      "path": "docs/reliability.md",
+      "sha256": "0981bb69536bc1fdbf09cb94e7734d55abba2fcca1180d67a073ae2ad26ea2c5",
+      "bytes": 1860
+    },
+    {
+      "path": "docs/timeline.md",
+      "sha256": "6e2e0c1561ceef314bedb96a4e65c7ab7d3ddbd3852dc19fddd1caa62b9d2911",
+      "bytes": 700
+    },
+    {
+      "path": "docs/workflows.md",
+      "sha256": "2e06fb4d84739ccf750d7ac8e6bec992439eb12a5e97db465f6150dc9e8deae8",
+      "bytes": 1723
+    },
+    {
+      "path": "scripts/package_check.sh",
+      "sha256": "4b4f5a9a61eda30519ce9e798e351a4a32751bb034239682ef7710d0cb5a8895",
+      "bytes": 519
+    },
+    {
+      "path": "scripts/prepublish_audit.py",
+      "sha256": "9c006932f3d5fd4b55d7028a418a1ba0fbd596599f5a73770babc7a548ec295d",
+      "bytes": 1931
+    },
+    {
+      "path": "workflows/01-media-maintenance.public-structure.json",
+      "sha256": "a4b8455b718b65080c0225d9c19bd52c3d2b8ea6760bf4ef268f2850a6cd424c",
+      "bytes": 2581
+    },
+    {
+      "path": "workflows/02-multiformat-publisher.public-structure.json",
+      "sha256": "415e8e82a5bf018f05274b6d16f5b0579343eefe3fac824e593b61fe3d94eb2e",
+      "bytes": 16467
+    },
+    {
+      "path": "workflows/03-editorial-view.public-structure.json",
+      "sha256": "297fba5372fa23f6c8c458269f511dad15cfeabd2934b48d80087c4ecb3533c5",
+      "bytes": 2278
+    },
+    {
+      "path": "workflows/04-history-observability.public-structure.json",
+      "sha256": "55b780e2971ba1d58be7828f4fc6a3bc1e33c70f0e5db8aca235ba5104a59939",
+      "bytes": 2438
+    },
+    {
+      "path": "workflows/05-content-intake.public-structure.json",
+      "sha256": "1a267f0195f6f9ba51ffa493aaa6777eb725316b04acf2e6cec19c66a7a53912",
+      "bytes": 2543
+    },
+    {
+      "path": "workflows/06-repository-operations.public-structure.json",
+      "sha256": "ca4e76b5c2bdab531f5de686c0e9dbdf172259e9935b8ee0586c5ee13b22fa47",
+      "bytes": 2285
+    },
+    {
+      "path": "workflows/07-ai-analysis.public-structure.json",
+      "sha256": "51e040305e4d0f325c80b5f13ca667276f45eccebadec0f19e16145c290c885e",
+      "bytes": 5648
+    },
+    {
+      "path": "workflows/08-editorial-decision.public-structure.json",
+      "sha256": "bbef96e7871323b5600d67989f58318c0d9f7b6c43bc8e3ac9c5b8aa4762ae99",
+      "bytes": 3178
+    },
+    {
+      "path": "workflows/09-fifo-planner.public-structure.json",
+      "sha256": "9412f85fcc5977e67d834255876e23f4c6bf984ea38a7c24fcbdc681754a0c85",
+      "bytes": 10408
+    },
+    {
+      "path": "workflows/10-state-synchronization.public-structure.json",
+      "sha256": "c11a0fa4cb07fd08fa76466926517ac019eea10eb8f947a856aafebbccc38082",
+      "bytes": 3032
+    },
+    {
+      "path": "workflows/11-consistency-watchdog.public-structure.json",
+      "sha256": "d82851cd5620f29ee4d2b36d6c71c84f2aac84074b8c7f41286463065a3cfdb4",
+      "bytes": 2266
+    },
+    {
+      "path": "workflows/PUBLIC_WORKFLOW_INDEX.md",
+      "sha256": "c151c1fa4412156122f3a71a5effa765cf114ce8cdf919d58c3d367cbf53b048",
+      "bytes": 1928
+    },
+    {
+      "path": "workflows/README.md",
+      "sha256": "a3ef88d70de8cb198c2f5c7bc2bf430d9b2176f40a58426ccff2cfb802e93e02",
+      "bytes": 626
+    }
+  ]
+}
