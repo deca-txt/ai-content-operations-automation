@@ -92,7 +92,7 @@ Strengthen:
 - indexes;
 - migrations;
 - transactions;
-- idempotency;
+- duplicate-risk reduction and external-outcome handling;
 - event logs;
 - metrics;
 - observability.

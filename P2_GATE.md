@@ -1,4 +1,6 @@
-# P2 Gate
+# P2 Gate — Historical Scaffold Gate
+
+P2 describes the original local-publication gate. It is retained as provenance; the current release status is documented in `docs/release-notes-v1.md` and `docs/reliability.md`.
 
 P2 is complete when:
 

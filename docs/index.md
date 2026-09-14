@@ -177,11 +177,19 @@ Publishing Engine
 → Backup / Freeze
 ```
 
-The final release had zero known defects after the suite.
+The final release had zero known critical defects, zero functional blockers and zero open technical debt after the suite. This does not mean “bug free”.
+
+The clean real production canary then confirmed planning, exclusive claim, creation-ID preservation, one media publish, no duplicate publication, state flow, terminality, synchronization and post-publish planner immutability. Both final projections were `PUBLISHED`; global inconsistencies were `0`.
+
+## 11. V1 closure
+
+`GATE_Z=PASS` · `V1_OPERATIONAL_RELEASE=PASS` · `V1=COMPLETE`.
+
+The main iterations were driven by real findings: carousel cardinality, concurrent ownership, ambiguous external outcomes, terminality, environment binding, semantic `meta_creation_id`, planner state ownership and per-item watchdog isolation.
 
 ---
 
-## 11. Outcome
+## 12. Outcome
 
 V1 ended with:
 
@@ -199,7 +207,7 @@ V1 ended with:
 
 ---
 
-## 12. Development timeline
+## 13. Development timeline
 
 The first recovered project evidence is from late July 2026.
 
@@ -213,7 +221,7 @@ This was not five weeks of full-time dedicated work.
 
 ---
 
-## 13. What this project taught me
+## 14. What this project taught me
 
 The biggest learning was not n8n itself.
 
@@ -230,7 +238,7 @@ It was learning how to:
 
 ---
 
-## 14. Where this can go next
+## 15. Where this can go next
 
 Possible future products include:
 
@@ -245,7 +253,7 @@ See [Future Product Roadmap](future-roadmap.md).
 
 ---
 
-## 15. Professional development
+## 16. Professional development
 
 This project also created a concrete study path:
 

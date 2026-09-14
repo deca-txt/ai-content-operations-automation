@@ -24,7 +24,7 @@ Alternatives:
 - reliability-engineering
 
 ## Visibility
-Public only after the sanitization gate passes.
+Public sanitized case study after final human review; no production export or runtime data is included.
 
 ## README language
 English primary, with Portuguese summary.

@@ -1,61 +1,21 @@
 # Future Product Roadmap
 
-This roadmap is intentionally separate from the frozen V1.
+V1 is complete. These are product-evolution opportunities after the operational release, not unresolved V1 debt.
 
-## P02 — Multi-channel Content Operations
-Support multiple publishing channels.
+## Next candidates (P1/P2)
 
-Possible targets:
-- Instagram;
-- TikTok;
-- LinkedIn;
-- Pinterest;
-- YouTube Shorts.
+- automated regression harness for critical state-machine scenarios;
+- exception-management UX;
+- `planned_at` versus `effective_publish_at` visibility;
+- controlled “replan now”;
+- scheduling preference/window;
+- health dashboard.
 
-## P03 — Custom Frontend
-Decouple the operator experience from the orchestration canvas.
+## Later evolution
 
-Possible architecture:
-
-```text
-Frontend
-+ API
-+ n8n orchestration engine
-```
-
-## P04 — AI Creative Operations
-Possible capabilities:
-- classification;
-- copy suggestions;
-- quality evaluation;
-- duplicate detection;
-- time recommendations;
-- content alternatives;
-- performance-based recommendations.
-
-## P05 — Multi-brand / SaaS
-Possible hierarchy:
-
-```text
-Workspace
-→ Brands
-→ Channels
-→ Content
-→ AI
-→ Approval
-→ Planning
-→ Publishing
-→ Analytics
-```
-
-## P06 — Analytics & Recommendation Engine
-Create a learning loop from publishing performance.
-
-## P07 — Commercial Starter Kit
-A reusable packaged version of the architecture with:
-- workflows;
-- documentation;
-- setup;
-- templates;
-- dashboards;
-- examples.
+- editorial calendar;
+- actionable operational alerts;
+- performance feedback and learning loop;
+- deeper commercial/content intelligence;
+- multi-channel and multi-brand expansion;
+- custom operator frontend.

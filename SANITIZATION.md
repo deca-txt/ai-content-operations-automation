@@ -18,6 +18,8 @@ This repository is a public case study.
 - production hostnames
 - internal file-system dumps
 - raw Docker volumes
+- backup/freeze paths and local usernames
+- production workflow version UUIDs, Data Table IDs, Instagram media IDs and execution payloads
 - `.env` files
 - secrets exported from n8n
 
@@ -50,3 +52,7 @@ EXAMPLE_WEBHOOK_PATH
 ## Evidence
 
 Production hashes and release evidence should remain in the private case archive unless there is a reason to expose a specific non-sensitive artifact.
+
+## Final audit scope
+
+Before commit, search the entire repository for tokens, bearer strings, access tokens, credential IDs, private paths, account IDs, production webhook URLs, media IDs, databases, backups and real operational content. Any match is reviewed manually; structural placeholders are preferred.

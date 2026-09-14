@@ -2,76 +2,22 @@
 
 ## Core datasets
 
-The system uses two main operational datasets:
+- **Publishing Queue:** scheduling and publishing lifecycle.
+- **Asset Repository:** content lifecycle and editorial state.
+- **Planner events:** scheduling history and consumed-slot evidence.
 
-### Publishing Queue
-Represents scheduling and publishing lifecycle.
+Production table identifiers and row data are intentionally omitted.
 
-### Asset Repository
-Represents content lifecycle and editorial state.
+## State ownership
 
-Production table identifiers are intentionally omitted.
+The publisher owns publishing states and external evidence. WF05E owns schedule fields only for explicitly plannable states: `PENDENTE`, `AGENDADO`, `EM_FILA` and `ERRO_TEMPORARIO`. Other states fail closed. WF06 projects publication state to the repository; WF07 reconciles independent relations.
 
----
+Representative states include `PENDENTE`, `PROCESSANDO`, `CRIANDO`, `PUBLISHING_EXTERNAL`, `PUBLICADO`, `PUBLICADO_SEM_COMENTARIO`, `EXTERNAL_OUTCOME_UNKNOWN`, `ERRO_DEFINITIVO`, `CANCELADO` and `SEM_VAGA_15D`.
 
-## Queue states
+## Publication identity
 
-Core states include:
-
-- `PENDING`
-- `PROCESSING`
-- `TEMPORARY_ERROR`
-- `PUBLISHED`
-
-Names are normalized here for public documentation.
-
----
-
-## Repository states
-
-Relevant operational states include:
-
-- queued;
-- published;
-
-AI analysis and editorial approval are represented through additional fields.
-
----
-
-## Canonical relationship
-
-Queue records generated from repository items embed a canonical content identity.
-
-The public representation is:
-
-```text
-queue_reference -> canonical_content_id
-repository_item -> canonical_content_id
-```
-
-The production encoding is intentionally omitted.
-
----
+The local row identifier and external Meta creation identifier have different meanings. V1 stores the latter explicitly as `meta_creation_id` before `media_publish`; it is never inferred from a generic `id`. For carousels, all required child containers must exist before the parent is publishable.
 
 ## Release invariants
 
-The release audit verifies that:
-
-- every active queue item has a valid canonical content identity;
-- active content identities are unique;
-- active queue identifiers are unique;
-- active planning slots are unique;
-- consumed publishing slots are not reused;
-- active queue content exactly matches repository items marked as queued;
-- repository queued identities are unique;
-- repository-originated publications match published repository items;
-- published identities are unique;
-- previous published history is not modified.
-
----
-
-## Legacy history
-
-The final release contained a stable set of legacy published queue rows that predated the repository model.
-
-They were explicitly separated from current repository-originated publishing so historical data would not be misclassified as a synchronization defect.
+Validation covers canonical identity, unique active slots, consumed-slot protection, queue/repository coherence, publication immutability, external identifier preservation and terminality. These are consistency controls, not a claim of exactly-once delivery.

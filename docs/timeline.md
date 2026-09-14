@@ -15,8 +15,8 @@ AI and queue pipeline stabilization.
 ## Late August
 First strong operational closure.
 
-## Early September
-Final reliability work:
+## September 13, 2026
+Final reliability work and operational closure:
 - planner defect closure;
 - workflow cleanup;
 - webhook cleanup;
@@ -25,7 +25,13 @@ Final reliability work:
 - read-only release suite;
 - controlled restart;
 - backup;
-- frozen V1.
+- clean real production canary;
+- Gate Z, backup, Compose/runtime hygiene and frozen V1.
+
+## V1 closure
+
+`GATE_Z=PASS` · `V1_OPERATIONAL_RELEASE=PASS` · `V1=COMPLETE`.
+The release has zero known critical defects, zero functional blockers and zero open technical debt. This does not mean “bug free”.
 
 ## Portfolio framing
 

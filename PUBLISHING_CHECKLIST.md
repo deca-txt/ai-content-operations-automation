@@ -1,4 +1,6 @@
-# Public Release Checklist
+# Public Release Checklist — Final Review Record
+
+The repository remains intentionally uncommitted for final human review. The current V1 closure is recorded in the release documents; this checklist is a review aid, not evidence of a production deployment.
 
 ## Content
 - [ ] README reviewed

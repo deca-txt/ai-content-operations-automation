@@ -1,7 +1,8 @@
 {
-  "generatedAtUTC": "2026-09-06T01:49:36.341214+00:00",
+  "generatedAtUTC": "2026-09-13T00:00:00Z",
   "repository": "ai-content-operations-automation",
-  "status": "LOCAL_SANITIZED_READY_FOR_MANUAL_REVIEW",
+  "status": "V1_COMPLETE_PRODUCTION_VALIDATED_READY_FOR_REVIEW",
+  "manifestStatus": "historical scaffold inventory; final status is documented in docs/release-notes-v1.md",
   "rawProductionWorkflowExportsIncluded": false,
   "publicStructuralBlueprints": 11,
   "files": [

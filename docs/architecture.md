@@ -3,63 +3,21 @@
 ## Functional architecture
 
 ```mermaid
-flowchart TD
-    A[Content Intake] --> B[Repository]
-    B --> C[AI Analysis]
-    C --> D[Human Decision]
-    D --> E[Planner]
-    E --> F[Publishing Queue]
-    F --> G[Publishing Engine]
-    G --> H[External Publishing API]
-    G --> I[State Synchronization]
-    I --> B
-
-    J[Watchdog] --> I
-    B --> K[Repository View]
-    F --> L[Editorial View]
-    I --> M[Operational History]
+flowchart LR
+    A[Content Intake] --> B[Asset Repository] --> C[AI Analysis] --> D[Human Approval]
+    D --> E[FIFO Planner] --> F[Publishing Queue] --> G[Exclusive Claim]
+    G --> H[Container Creation] --> I[Readiness / Polling] --> J[Protected Publish Boundary]
+    J --> K[Instagram Graph API] --> L[State Synchronization] --> B
+    M[Watchdog / Observability] --> L
 ```
 
 ## Layers
 
-### Experience / Operations
-- content intake form;
-- repository view;
-- editorial view;
-- history.
+- **Experience:** intake, repository, editorial approval, operational views and history.
+- **Orchestration:** eleven specialized n8n workflows, schedules, webhooks and subworkflows.
+- **Intelligence:** AI-assisted classification and analysis; humans own the decision.
+- **State:** queue, asset repository, planner events and execution metadata.
+- **External boundary:** media preparation and Instagram Graph API publication.
+- **Reliability:** claims, readiness polling, terminality guards, reconciliation, health checks, backup and release freeze.
 
-### Orchestration
-- n8n;
-- triggers;
-- schedules;
-- webhooks;
-- reusable subworkflows.
-
-### Intelligence
-- Gemini-based analysis.
-
-### Data
-- SQLite;
-- queue;
-- asset repository;
-- workflow/execution metadata.
-
-### External services
-- Instagram Graph API;
-- Cloudinary.
-
-### Reliability
-- watchdog;
-- synchronization;
-- state invariants;
-- execution retention;
-- health checks;
-- backup;
-- recovery;
-- release baseline.
-
-## Architectural idea
-
-The product should not be understood as eleven independent automations.
-
-It is a stateful orchestration system where workflows are specialized components connected through persistent operational data.
+The local state store and irreversible external API do not form one atomic transaction. The publisher persists `meta_creation_id`, claims exclusive ownership, attempts external publish once, and quarantines ambiguity rather than guessing or retrying unsafely. Public workflow files are structure-only representations, not production exports.

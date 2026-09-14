@@ -1,87 +1,17 @@
 # Workflow Architecture
 
-The production V1 contains eleven active workflows.
+V1 contains eleven active workflows. The public JSON files are sanitized structural representations, never production exports.
 
-Public documentation uses functional names only. Production IDs and real webhook paths are intentionally omitted.
+1. **Media Maintenance** — scheduled media housekeeping.
+2. **Multi-format Publisher** — exclusive claim, container creation, readiness/polling, protected publish boundary, outcome classification and synchronization.
+3. **Editorial View** — human-facing editorial view.
+4. **History & Observability** — operational history.
+5. **Content Intake** — fast repository entry.
+6. **Repository Operations** — review and actions.
+7. **Automatic AI Analysis** — AI-assisted analysis with controlled triggers.
+8. **Editorial Decision** — human decision to planner eligibility.
+9. **FIFO Planner** — slot assignment with a fail-closed plannable-state allowlist.
+10. **Publication State Synchronization** — repository projection.
+11. **Consistency Watchdog** — reconciliation with per-item failure isolation.
 
-## 1. Media Maintenance
-Scheduled cleanup of media infrastructure.
-
-## 2. Multi-format Publisher
-Central publishing engine.
-
-Responsibilities:
-- select eligible item;
-- process publishing;
-- handle temporary failure paths;
-- register publication evidence;
-- request synchronization.
-
-## 3. Editorial View
-Human-facing editorial/campaign view.
-
-## 4. History & Observability
-Operational history and visibility.
-
-## 5. Content Intake
-Fast form-based entry into the repository.
-
-## 6. Repository Operations
-Repository review and operational actions.
-
-## 7. Automatic AI Analysis
-AI-assisted content analysis.
-
-Triggers may include:
-- event-driven request;
-- fallback schedule;
-- manual execution for controlled testing.
-
-## 8. Editorial Decision
-Converts human decision into planner eligibility.
-
-## 9. FIFO Planner
-Automatic planning engine.
-
-Responsibilities:
-- determine available slots;
-- preserve existing assignments;
-- schedule approved content;
-- avoid slot duplication;
-- avoid consumed-slot reuse.
-
-## 10. Publication → Repository Synchronization
-Shared consistency component.
-
-Used by:
-- normal publication;
-- recovery path;
-- watchdog.
-
-## 11. Consistency Watchdog
-Detects operational divergence and requests reconciliation.
-
----
-
-## Functional grouping
-
-```text
-INTAKE & EDITORIAL
-Content Intake
-→ AI Analysis
-→ Repository Operations
-→ Editorial Decision
-
-PLANNING
-FIFO Planner
-
-PUBLISHING
-Multi-format Publisher
-
-RELIABILITY & OBSERVABILITY
-Synchronization
-Watchdog
-Editorial View
-History
-Media Maintenance
-```
+The publisher owns publication state; the planner owns schedule changes only in allowed states; synchronization owns the repository projection. Confirmed success, deterministic rejection and ambiguous external outcomes follow separate paths, and late errors cannot downgrade protected terminal states. See the [public workflow index](../workflows/PUBLIC_WORKFLOW_INDEX.md).
